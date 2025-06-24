@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehul Vishwakarma - AI/ML Developer</title>
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #00bcd4;        /* Calm tech-blue */
+      --bg: #0e0f12;            /* Soft dark background */
+      --card-bg: #1c1d22;       /* Slightly raised dark cards */
+      --nav-bg: #121316;        /* Darker navbar for contrast */
+      --text: #e2e8f0;          /* Light gray text */
+      --muted: #a0aec0;         /* Muted light gray */
+      --white: #ffffff;
+    }
+    /* Use Roboto font for the whole page */
+    html, body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg); /* Keep original dark background */
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    /* Responsive container for sections */
+    section, header, footer {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 40px 20px 0 20px;
+      border-radius: 18px;
+      background: transparent; /* Keep section background transparent for dark theme */
+      box-shadow: none;
+    }
+    /* Navigation bar styles */
+    nav {
+      background: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 0 0 18px 18px;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 16px 0;
+    }
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s, background 0.2s;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      color: #fff;
+      background: #00bcd4;
+    }
+    /* Animated SVG logo: grows on hover */
+    .logo-svg {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+      will-change: transform;
+    }
+    .logo-svg:hover {
+      transform: scale(1.18);
+    }
+    .logo-svg svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    /* Section headings */
+    h1, h2, h3 {
+      color: #00bcd4;
+      margin-top: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    h1 { font-size: 2.6rem; margin-bottom: 8px; }
+    h2 { font-size: 2rem; margin-bottom: 12px; }
+    h3 { font-size: 1.2rem; margin-bottom: 6px; }
+    /* Responsive grid for projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 700px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+    }
+    /* Responsive tweaks for mobile */
+    @media (max-width: 700px) {
+      section, header, footer { padding: 24px 6px 0 6px; }
+      nav ul { gap: 10px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .nav-container { flex-direction: column; align-items: flex-start; }
+    }
+    /* Card style for content blocks */
+    .card {
+      background: var(--card-bg);
+      padding: 22px 20px 18px 20px;
+      margin: 22px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0,188,212,0.07);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 24px rgba(0,188,212,0.15);
+      transform: translateY(-2px) scale(1.01);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with animated SVG logo -->
+  <nav>
+    <div class="nav-container">
+      <!-- Inline SVG Logo (grows on hover) -->
+      <a href="#" class="logo-svg" aria-label="Logo">
+        <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="200" height="200" fill="#0A0F1C"/>
+          <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" fill="none" stroke="#00bcd4" stroke-width="10"/>
+          <text x="50" y="130" font-family="Arial, sans-serif" font-size="80" fill="#00bcd4" font-weight="bold">MV</text>
+        </svg>
+      </a>
+      <!-- Navigation Links -->
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hackathons">Hackathons</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#volunteering">Volunteering</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Mehul Vishwakarma</h1>
+    <p><strong>AI/ML Developer | Generative AI Enthusiast | Hackathon Innovator</strong></p>
+    <p>Passionate about building intelligent systems that solve real-world problems.</p>
+    <a href="resume_MV.pdf" class="resume-btn" download>Download Resume</a>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am currently pursuing <strong>B.Tech in AI/ML</strong> from SRIT, Jabalpur (2023–2027) with a CGPA of 8.8.<br>
+        I’m passionate about creating impactful solutions using AI, ML, and LLMs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills & Tech Stack</h2>
+    <div class="card">
+      <p><strong>Python</strong>, <strong>C++</strong>, <strong>Java (basic)</strong></p>
+    </div>
+    <div class="card">
+      <p><strong>Machine Learning:</strong> Supervised/Unsupervised, LLMs, Prompt Engineering</p>
+    </div>
+    <div class="card">
+      <p><strong>Tools:</strong> Scikit-learn, TensorFlow, NumPy, Pandas, Cisco Packet Tracer</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Fake News Detection</h3>
+        <p>Utilized NLP and ML to classify news articles as fake or real.</p>
+      </div>
+      <div class="card">
+        <h3>AI Chatbot</h3>
+        <p>Built using prompt engineering for academic conversations and Q&A.</p>
+      </div>
+      <div class="card">
+        <h3>Secure Network Simulation</h3>
+        <p>Designed secure networks in Cisco Packet Tracer with multi-layer security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hackathons -->
+  <section id="hackathons">
+    <h2>Hackathons</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Smart India Hackathon 2024:</strong> AI-based security automation</li>
+        <li><strong>HackSrit, Srijan:</strong> Developed ML prototype solutions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>Google: Generative AI</li>
+        <li>Cisco: Cybersecurity Essentials</li>
+        <li>Prompt Engineering</li>
+        <li>AI Basics</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Volunteering -->
+  <section id="volunteering">
+    <h2>Community & Volunteering</h2>
+    <div class="card">
+      <p>
+        <strong>Google Developer Group Volunteer:</strong> Conducted workshops and mentored students on AI and cybersecurity topics.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <ul>
+        <li><strong>B.Tech in AI/ML</strong> – SRIT Jabalpur (2023–2027), CGPA: 8.8</li>
+        <li><strong>Class XII</strong> – 91.8% (Central Academy, Shahdol)</li>
+        <li><strong>Class X</strong> – 81.6% (Spring Dales, Shahdol)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:mehulvinodv@gmail.com">mehulvinodv@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918817385608">+91 8817385608</a></p>
+      <p>Location: Jabalpur, India</p>
+      <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mehul Vishwakarma. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!--
+- Sections use .card for content blocks, keeping original dark backgrounds.
+- Responsive layout with media queries.
+- Roboto font applied globally.
+- Animated SVG logo on hover.
+- Comments added for each change.
+-->
